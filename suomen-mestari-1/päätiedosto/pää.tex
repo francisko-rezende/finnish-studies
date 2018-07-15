@@ -1,0 +1,47 @@
+\documentclass[]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[finnish]{babel}
+\usepackage[light]{kpfonts}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\usepackage{color}
+\usepackage[a4paper]{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{glossaries}
+
+\setcounter{secnumdepth}{0}
+
+\addto\captionsfinnish{\renewcommand{\chaptername}{Kappale}}
+
+\newglossaryentry{toissapaivana}{name={toissapäivänä},description={Tänään on Lauantai, eilen oli Lauantai sitten toissapäivänä oli Torstai}}
+
+\newglossaryentry{eilen}{name={eilen},description={Tänään on maanantai sitten eilen oli Suununtai}}
+
+\makenoidxglossaries
+
+\glstoctrue
+
+\usepackage{subfiles}
+
+
+\title{Suomen Mestari 1}
+
+\author{Francisko de Moraes Rezende}
+\date{}
+
+\begin{document}
+
+\keepXColumns % Makes tabularx's width option as the actual width instead of maximum possible width
+
+\maketitle
+
+\tableofcontents
+
+\subfile{../kappalet/kappale-1}
+
+\glsaddall
+\setglossarystyle{altlistgroup}
+\printnoidxglossary[title=Sanasto,nonumberlist]
+
+\end{document}
